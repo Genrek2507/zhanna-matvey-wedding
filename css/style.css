@@ -3012,4 +3012,560 @@ section.personal-qr .qr-card {
         height: 230px !important;
     }
 
+}/* =========================================================
+   НОВЫЙ ДИЗАЙН СВАДЕБНОГО САЙТА
+   Палитра: кремовый + бордовый + синий + коричневый
+   ========================================================= */
+
+:root {
+    --cream: #F2EDE4 !important;
+    --paper: #FAF7F2 !important;
+
+    --lavender: #5A1820 !important;
+    --lavender-light: #D8C9C0 !important;
+
+    --sage-light: #AAB8C4 !important;
+    --sage: #7189A3 !important;
+
+    --brown: #65483D !important;
+    --dark: #2D2320 !important;
+
+    --gold: #8B5960 !important;
+    --white: #FFFFFF !important;
+}
+
+
+/* =========================================================
+   ОСНОВА
+   ========================================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--cream) !important;
+    color: var(--dark) !important;
+    font-family: 'Montserrat', sans-serif;
+}
+
+section {
+    position: relative;
+    background: var(--cream);
+}
+
+
+/* =========================================================
+   ТИПОГРАФИКА
+   ========================================================= */
+
+h1,
+h2,
+h3,
+.location-place h3,
+.timeline-title,
+.timeline-time {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--brown);
+}
+
+.section-label {
+    color: var(--lavender) !important;
+    letter-spacing: 4px;
+}
+
+.section h2,
+.for-you h2,
+.photo-gallery h2 {
+    color: var(--brown) !important;
+}
+
+
+/* =========================================================
+   ДЕКОРАТИВНЫЕ ЛИНИИ
+   ========================================================= */
+
+.decor-line {
+    width: 65px;
+    height: 1px;
+    background: var(--lavender) !important;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+    background:
+        linear-gradient(
+            rgba(45, 35, 32, 0.28),
+            rgba(45, 35, 32, 0.48)
+        ),
+        url('../images/hero.png') center center / cover no-repeat !important;
+
+    color: var(--white) !important;
+}
+
+.hero h1 {
+    color: #FAF7F2 !important;
+    text-shadow:
+        0 3px 25px rgba(45, 35, 32, 0.35);
+}
+
+.hero-subtitle,
+.hero-date {
+    color: #FAF7F2 !important;
+}
+
+
+/* =========================================================
+   БЛОК «ДЛЯ ВАС»
+   ========================================================= */
+
+section.for-you {
+    background: var(--cream) !important;
+}
+
+.for-you .section-label {
+    color: var(--lavender) !important;
+}
+
+.for-you h2 {
+    color: var(--brown) !important;
+}
+
+.for-you .invitation-text {
+    color: var(--dark) !important;
+}
+
+.for-you .invitation-text + .invitation-text {
+    color: var(--sage) !important;
+}
+
+.save-date-title {
+    color: var(--lavender) !important;
+}
+
+.save-date-number {
+    color: var(--brown) !important;
+}
+
+.save-date-month {
+    color: var(--dark) !important;
+}
+
+
+/* =========================================================
+   ТАЙМЕР
+   ========================================================= */
+
+.countdown-section {
+    background: #D8C9C0 !important;
+    color: var(--dark) !important;
+}
+
+.countdown-section h2 {
+    color: var(--brown) !important;
+}
+
+.countdown-item span {
+    color: var(--lavender) !important;
+}
+
+.countdown-item small {
+    color: var(--dark) !important;
+}
+
+.countdown-separator {
+    color: var(--sage) !important;
+}
+
+
+/* =========================================================
+   ФОТОГАЛЕРЕЯ
+   ========================================================= */
+
+.photo-gallery {
+    background: var(--cream) !important;
+}
+
+.photo-gallery h2 {
+    color: var(--brown) !important;
+}
+
+.gallery-intro {
+    color: var(--dark) !important;
+}
+
+.gallery-grid {
+    gap: 14px !important;
+}
+
+.gallery-item {
+    background: #D8C9C0 !important;
+}
+
+.gallery-item img {
+    transition:
+        transform 0.7s ease,
+        filter 0.7s ease !important;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.025) !important;
+    filter: brightness(0.95) !important;
+}
+
+
+/* =========================================================
+   БЛОК «КОГДА И ГДЕ»
+   ========================================================= */
+
+.location {
+    background: #E4DCD3 !important;
+}
+
+.location-card {
+    background: var(--paper) !important;
+
+    border: 1px solid rgba(90, 24, 32, 0.18) !important;
+
+    box-shadow:
+        0 18px 50px rgba(45, 35, 32, 0.10) !important;
+}
+
+.location-date {
+    color: var(--brown) !important;
+}
+
+.location-dot {
+    color: var(--lavender) !important;
+}
+
+.location-time span {
+    color: var(--lavender) !important;
+}
+
+.location-time small {
+    color: var(--dark) !important;
+}
+
+.location-place h3 {
+    color: var(--brown) !important;
+}
+
+.location-place p {
+    color: var(--dark) !important;
+}
+
+.map-button {
+    border-color: var(--lavender) !important;
+    color: var(--lavender) !important;
+}
+
+.map-button:hover {
+    background: var(--lavender) !important;
+    color: var(--white) !important;
+}
+
+
+/* =========================================================
+   ДРЕСС-КОД
+   ========================================================= */
+
+.dress-code {
+    background: #7189A3 !important;
+    color: #FAF7F2 !important;
+}
+
+.dress-code h2,
+.dress-code .section-label {
+    color: #FAF7F2 !important;
+}
+
+.dress-code-text {
+    color: #FAF7F2 !important;
+}
+
+.dress-code .decor-line {
+    background: #D8C9C0 !important;
+}
+
+
+/* Цветовые кружки дресс-кода */
+
+.palette span {
+    border-color: #FAF7F2 !important;
+    box-shadow:
+        0 5px 18px rgba(45, 35, 32, 0.15);
+}
+
+.palette span:nth-child(1) {
+    background: #F2EDE4 !important;
+}
+
+.palette span:nth-child(2) {
+    background: #D8C9C0 !important;
+}
+
+.palette span:nth-child(3) {
+    background: #7189A3 !important;
+}
+
+.palette span:nth-child(4) {
+    background: #65483D !important;
+}
+
+.palette span:nth-child(5) {
+    background: #5A1820 !important;
+}
+
+
+/* =========================================================
+   RSVP
+   ========================================================= */
+
+.rsvp {
+    background: var(--paper) !important;
+}
+
+.rsvp h2 {
+    color: var(--brown) !important;
+}
+
+.rsvp-intro {
+    color: var(--dark) !important;
+}
+
+.form-group label {
+    color: var(--lavender) !important;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+    background: var(--cream) !important;
+
+    border: 1px solid #CDBDB4 !important;
+
+    color: var(--dark) !important;
+}
+
+.form-group input[type="text"]:focus,
+.form-group textarea:focus {
+    border-color: var(--lavender) !important;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #8B7A72;
+}
+
+.radio-option {
+    background: var(--cream) !important;
+    border-color: #CDBDB4 !important;
+}
+
+.radio-option:hover {
+    border-color: var(--lavender) !important;
+    background: #EDE4DA !important;
+}
+
+.radio-option input {
+    accent-color: var(--lavender) !important;
+}
+
+.radio-option span {
+    color: var(--dark) !important;
+}
+
+.rsvp-submit {
+    background: var(--lavender) !important;
+    border-color: var(--lavender) !important;
+    color: #FAF7F2 !important;
+}
+
+.rsvp-submit:hover {
+    background: var(--brown) !important;
+    border-color: var(--brown) !important;
+}
+
+.form-success {
+    background: var(--cream) !important;
+    border-color: #CDBDB4 !important;
+}
+
+.form-success h3 {
+    color: var(--lavender) !important;
+}
+
+
+/* =========================================================
+   ПЕРСОНАЛЬНЫЙ QR
+   ========================================================= */
+
+section.personal-qr {
+    background: #E4DCD3 !important;
+}
+
+.personal-qr .section-label {
+    color: var(--lavender) !important;
+}
+
+.personal-qr h2 {
+    color: var(--brown) !important;
+}
+
+.qr-intro {
+    color: var(--dark) !important;
+}
+
+.qr-card {
+    background: var(--paper) !important;
+
+    border: 1px solid rgba(90, 24, 32, 0.18) !important;
+
+    box-shadow:
+        0 20px 60px rgba(45, 35, 32, 0.12) !important;
+}
+
+.qr-card::before {
+    border-color: rgba(90, 24, 32, 0.14) !important;
+}
+
+.qr-card-top,
+.qr-card-title {
+    color: var(--lavender) !important;
+}
+
+.qr-card-date {
+    color: var(--brown) !important;
+}
+
+.qr-card-line {
+    background: var(--lavender) !important;
+}
+
+.qr-card-caption {
+    color: var(--sage) !important;
+}
+
+.qr-card-note {
+    color: var(--dark) !important;
+}
+
+.qr-frame {
+    border-color: rgba(90, 24, 32, 0.18) !important;
+}
+
+
+/* =========================================================
+   ФИНАЛЬНАЯ ФОТОСЕКЦИЯ
+   ========================================================= */
+
+.final-section {
+    background: var(--dark) !important;
+}
+
+.final-overlay {
+    background:
+        linear-gradient(
+            rgba(45, 35, 32, 0.18),
+            rgba(90, 24, 32, 0.48)
+        ) !important;
+}
+
+.final-overlay h2,
+.final-small,
+.final-names {
+    color: #FAF7F2 !important;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+    background: #2D2320 !important;
+    color: #FAF7F2 !important;
+}
+
+.footer p {
+    color: #FAF7F2 !important;
+}
+
+
+/* =========================================================
+   ЗАСТАВКА
+   ========================================================= */
+
+.loader {
+    background: #F2EDE4 !important;
+    color: var(--brown) !important;
+}
+
+.loader-line {
+    background: var(--lavender) !important;
+}
+
+
+/* =========================================================
+   МОБИЛЬНАЯ ВЕРСИЯ
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    section {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .for-you h2 {
+        font-size: 58px !important;
+    }
+
+    .photo-gallery {
+        padding: 80px 18px !important;
+    }
+
+    .gallery-grid {
+        gap: 12px !important;
+    }
+
+    .countdown {
+        gap: 8px !important;
+    }
+
+    .location-card {
+        padding: 40px 20px !important;
+    }
+
+    .rsvp-form {
+        width: 100%;
+    }
+
+    .qr-card {
+        padding: 35px 22px 30px !important;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 58px !important;
+    }
+
+    .section h2,
+    .photo-gallery h2 {
+        font-size: 52px !important;
+    }
+
+    .for-you h2 {
+        font-size: 52px !important;
+    }
+
+    .gallery-grid {
+        gap: 10px !important;
+    }
 }
