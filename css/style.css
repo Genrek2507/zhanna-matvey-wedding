@@ -5,23 +5,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
 
 :root {
-    /* Основная палитра сайта */
-    --lavender: #9E83B8;
-    --lavender-light: #CCBDDB;
+    /* ========================================
+       НОВАЯ ПАЛИТРА СВАДЕБНОГО САЙТА
+       ======================================== */
 
-    --cream: #EBE5D9;
+    --burgundy: #571522;
+    --burgundy-dark: #2d0c14;
+    --burgundy-light: #7a2634;
 
-    --sage-light: #A2ABA1;
-    --sage: #758976;
+    --navy: #101a2b;
+    --navy-light: #1c2b43;
 
-    /* Совместимость со старым кодом */
-    --paper: #F8F6F2;
-    --beige: #CCBDDB;
-    --brown: #758976;
-    --dark: #3F443E;
-    --gold: #9E83B8;
+    --cream: #eee3d3;
+    --paper: #f5ecdf;
+    --paper-dark: #ded0bc;
 
-    --white: #FFFFFF;
+    --blue: #9bb4ce;
+    --blue-dark: #506c8b;
+
+    --gold: #b99757;
+    --gold-light: #d4b878;
+
+    --brown: #6b4a38;
+    --dark: #241b1b;
+
+    --white: #fffaf3;
+
+    /* Старые переменные оставляем,
+       чтобы старый CSS ничего не ломал */
+    --lavender: var(--burgundy);
+    --lavender-light: var(--burgundy-light);
+    --sage-light: var(--blue);
+    --sage: var(--blue-dark);
+    --beige: var(--paper-dark);
 }
 
 * {
@@ -3568,4 +3584,483 @@ section.personal-qr {
     .gallery-grid {
         gap: 10px !important;
     }
+}
+/* =========================================================
+   НОВЫЙ ВИНТАЖНЫЙ СТИЛЬ СВАДЕБНОГО САЙТА
+   ЖАННА & МАТВЕЙ
+   ========================================================= */
+
+/* ---------- ОБЩИЙ ФОН ---------- */
+
+body {
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(185, 151, 87, 0.06),
+            transparent 25%
+        ),
+        var(--cream);
+
+    color: var(--dark);
+}
+
+
+/* ---------- ЗАГОЛОВКИ ---------- */
+
+h1,
+h2,
+h3 {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--burgundy);
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+    background:
+        linear-gradient(
+            rgba(20, 8, 10, 0.28),
+            rgba(20, 8, 10, 0.58)
+        ),
+        url('../images/hero.png') center center / cover no-repeat;
+
+    min-height: 100vh;
+}
+
+.hero-overlay {
+    background:
+        radial-gradient(
+            circle at center,
+            transparent 20%,
+            rgba(15, 5, 8, 0.45) 100%
+        );
+}
+
+.hero h1 {
+    color: #f5e8d6;
+
+    text-shadow:
+        0 3px 20px rgba(0,0,0,.45),
+        0 0 45px rgba(0,0,0,.25);
+}
+
+.hero h1 span {
+    color: var(--gold-light);
+}
+
+.hero-date {
+    color: #eadbc5;
+}
+
+.eyebrow {
+    color: var(--gold-light);
+    letter-spacing: 5px;
+}
+
+
+/* =========================================================
+   ОБЫЧНЫЕ СЕКЦИИ
+   ========================================================= */
+
+.section {
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Кремовая бумага */
+
+.for-you {
+    background:
+        radial-gradient(
+            circle at 15% 30%,
+            rgba(120, 80, 50, .07),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(100, 60, 40, .06),
+            transparent 30%
+        ),
+        var(--paper);
+
+    color: var(--dark);
+}
+
+
+/* Рваный край бумаги */
+
+.for-you::before,
+.for-you::after,
+.location::before,
+.location::after {
+    content: "";
+    position: absolute;
+    left: -2%;
+    width: 104%;
+    height: 22px;
+
+    background: var(--paper);
+
+    clip-path: polygon(
+        0 40%,
+        5% 65%,
+        10% 35%,
+        16% 70%,
+        22% 40%,
+        28% 65%,
+        35% 35%,
+        42% 70%,
+        49% 40%,
+        56% 65%,
+        64% 35%,
+        72% 68%,
+        80% 38%,
+        88% 65%,
+        95% 35%,
+        100% 55%,
+        100% 100%,
+        0 100%
+    );
+
+    z-index: 5;
+}
+
+.for-you::before {
+    top: -1px;
+}
+
+.for-you::after {
+    bottom: -1px;
+    transform: rotate(180deg);
+}
+
+
+/* =========================================================
+   ЗАГОЛОВКИ СЕКЦИЙ
+   ========================================================= */
+
+.section-label {
+    color: var(--gold);
+    letter-spacing: 4px;
+}
+
+.for-you h2,
+.date-section h2,
+.location h2,
+.dress-code h2,
+.countdown h2,
+.photo-gallery h2,
+.rsvp h2 {
+    color: var(--burgundy);
+}
+
+
+/* =========================================================
+   ЗОЛОТЫЕ ЛИНИИ
+   ========================================================= */
+
+.decorative-line,
+.decor-line {
+    background: var(--gold);
+
+    position: relative;
+}
+
+.decorative-line::before,
+.decorative-line::after,
+.decor-line::before,
+.decor-line::after {
+    content: "✦";
+
+    position: absolute;
+    top: 50%;
+
+    color: var(--gold);
+    font-size: 11px;
+
+    transform: translateY(-50%);
+}
+
+.decorative-line::before,
+.decor-line::before {
+    left: -22px;
+}
+
+.decorative-line::after,
+.decor-line::after {
+    right: -22px;
+}
+
+
+/* =========================================================
+   ДАТА
+   ========================================================= */
+
+.date-section {
+    background:
+        radial-gradient(
+            circle at 10% 90%,
+            rgba(120, 25, 40, .25),
+            transparent 25%
+        ),
+        var(--burgundy-dark);
+
+    color: var(--cream);
+}
+
+.date-section .section-label,
+.date-section h2,
+.date-section .save-date-number,
+.date-section .event-time-number {
+    color: var(--gold-light);
+}
+
+.date-section .event-time-label {
+    color: var(--cream);
+}
+
+.save-date-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(55px, 9vw, 110px);
+    letter-spacing: 8px;
+}
+
+
+/* =========================================================
+   ФОТО
+   ========================================================= */
+
+.photo-section {
+    position: relative;
+    background: var(--navy);
+    padding: 25px;
+}
+
+.photo-section img {
+    border: 10px solid var(--paper);
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.35);
+}
+
+
+/* =========================================================
+   LOCATION
+   ========================================================= */
+
+.location {
+    background: var(--paper);
+}
+
+.location-card {
+    background:
+        linear-gradient(
+            rgba(255,255,255,.15),
+            rgba(255,255,255,.15)
+        ),
+        var(--cream);
+
+    border:
+        1px solid rgba(185,151,87,.35);
+
+    box-shadow:
+        0 20px 50px rgba(60,35,25,.15);
+}
+
+.location-date span,
+.location-time span {
+    color: var(--burgundy);
+}
+
+.map-button {
+    background: var(--burgundy) !important;
+    color: var(--cream) !important;
+
+    border: none !important;
+
+    transition: .3s ease;
+}
+
+.map-button:hover {
+    background: var(--burgundy-light) !important;
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   DRESS CODE
+   ========================================================= */
+
+.dress-code {
+    background: var(--blue);
+    color: var(--navy);
+}
+
+.dress-code h2,
+.dress-code .section-label {
+    color: var(--navy);
+}
+
+.dress-code-text {
+    color: var(--navy);
+}
+
+.palette span {
+    box-shadow:
+        0 7px 20px rgba(0,0,0,.2);
+}
+
+
+/* =========================================================
+   ТАЙМЕР
+   ========================================================= */
+
+.countdown,
+.countdown-section {
+    background: var(--navy);
+    color: var(--cream);
+}
+
+.countdown h2,
+.countdown .section-label {
+    color: var(--gold-light);
+}
+
+.countdown-item span {
+    color: var(--gold-light);
+}
+
+.countdown-item small {
+    color: var(--cream);
+}
+
+
+/* =========================================================
+   ГАЛЕРЕЯ
+   ========================================================= */
+
+.photo-gallery {
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(185,151,87,.08),
+            transparent 30%
+        ),
+        var(--paper);
+}
+
+.gallery-item {
+    background: var(--cream);
+
+    padding: 10px;
+
+    box-shadow:
+        0 15px 35px rgba(50,30,20,.18);
+
+    transform: rotate(-1deg);
+}
+
+.gallery-item:nth-child(2) {
+    transform: rotate(1.5deg);
+}
+
+.gallery-item:nth-child(3) {
+    transform: rotate(-1.2deg);
+}
+
+.gallery-item img {
+    filter: saturate(.9);
+}
+
+
+/* =========================================================
+   RSVP
+   ========================================================= */
+
+.rsvp {
+    background: var(--paper);
+}
+
+.rsvp h2 {
+    color: var(--burgundy);
+}
+
+.rsvp-form {
+    background: rgba(255,255,255,.35);
+
+    border:
+        1px solid rgba(185,151,87,.25);
+
+    box-shadow:
+        0 20px 50px rgba(50,30,20,.12);
+}
+
+.rsvp input,
+.rsvp textarea {
+    background: rgba(255,255,255,.65);
+
+    border:
+        1px solid rgba(87,21,34,.25);
+
+    color: var(--dark);
+}
+
+.rsvp-submit {
+    background: var(--burgundy) !important;
+    color: var(--cream) !important;
+
+    border: none !important;
+
+    transition: .3s ease;
+}
+
+.rsvp-submit:hover {
+    background: var(--burgundy-light) !important;
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   ФИНАЛ
+   ========================================================= */
+
+.final-section {
+    background: var(--navy);
+}
+
+.final-overlay {
+    background:
+        linear-gradient(
+            rgba(10,15,25,.15),
+            rgba(10,15,25,.7)
+        );
+}
+
+.final-small,
+.final-names {
+    color: var(--gold-light);
+}
+
+.final-overlay h2 {
+    color: #f5e8d6;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+    background: var(--navy);
+    color: var(--cream);
+    border-top: 1px solid rgba(185,151,87,.25);
+}
+
+.footer p:first-child {
+    color: var(--gold);
 }
